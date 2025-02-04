@@ -29,5 +29,5 @@ output "fsx-password" {
 
 output "zz_update_kubeconfig_command" {
   # value = "aws eks update-kubeconfig --name " + module.eks.cluster_id
-  value = format("%s %s %s %s", "aws eks update-kubeconfig --name", module.eks.cluster_name, "--region", var.aws_region, "--profile eks-offer")
+  value = format("%s %s %s %s %s", "aws eks update-kubeconfig --name", module.eks.cluster_name, "--region", var.aws_region, "--profile=eks-offer")
 }

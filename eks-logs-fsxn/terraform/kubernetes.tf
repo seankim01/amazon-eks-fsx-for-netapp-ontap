@@ -10,7 +10,7 @@ provider "kubernetes" {
     api_version = "client.authentication.k8s.io/v1beta1"
     command     = "aws"
     # This requires the awscli to be installed locally where Terraform is executed
-    args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name, "--region", var.aws_region, "--profile eks-offer"]
+    args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name, "--region", var.aws_region, "--profile", var.profile]
   }
 }
 
@@ -22,7 +22,7 @@ provider "kubectl" {
     api_version = "client.authentication.k8s.io/v1beta1"
     command     = "aws"
     # This requires the awscli to be installed locally where Terraform is executed
-    args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name, "--region", var.aws_region, "--profile eks-offer"]
+    args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name, "--region", var.aws_region, "--profile", var.profile]
   }
   load_config_file       = false
 }
