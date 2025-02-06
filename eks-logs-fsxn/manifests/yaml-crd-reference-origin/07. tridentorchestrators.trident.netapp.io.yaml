@@ -1,0 +1,53 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: "2025-02-06T03:28:35Z"
+  generation: 1
+  name: tridentorchestrators.trident.netapp.io
+  resourceVersion: "845"
+  uid: 5111cfd2-5fb9-4d76-a1d9-fc5f4304fcf7
+spec:
+  conversion:
+    strategy: None
+  group: trident.netapp.io
+  names:
+    kind: TridentOrchestrator
+    listKind: TridentOrchestratorList
+    plural: tridentorchestrators
+    shortNames:
+      - torc
+      - torchestrator
+    singular: tridentorchestrator
+  scope: Cluster
+  versions:
+    - name: v1
+      schema:
+        openAPIV3Schema:
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
+      served: true
+      storage: true
+      subresources:
+        status: {}
+status:
+  acceptedNames:
+    kind: TridentOrchestrator
+    listKind: TridentOrchestratorList
+    plural: tridentorchestrators
+    shortNames:
+      - torc
+      - torchestrator
+    singular: tridentorchestrator
+  conditions:
+    - lastTransitionTime: "2025-02-06T03:28:35Z"
+      message: no conflicts found
+      reason: NoConflicts
+      status: "True"
+      type: NamesAccepted
+    - lastTransitionTime: "2025-02-06T03:28:35Z"
+      message: the initial names have been accepted
+      reason: InitialNamesAccepted
+      status: "True"
+      type: Established
+  storedVersions:
+    - v1

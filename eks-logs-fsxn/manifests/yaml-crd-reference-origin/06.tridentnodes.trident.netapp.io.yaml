@@ -1,0 +1,57 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: "2025-02-06T03:31:22Z"
+  finalizers:
+    - trident.netapp.io
+  generation: 1
+  name: tridentnodes.trident.netapp.io
+  resourceVersion: "1563"
+  uid: 903b367d-3deb-45a3-a7f4-9ba3d3c29d9a
+spec:
+  conversion:
+    strategy: None
+  group: trident.netapp.io
+  names:
+    categories:
+      - trident
+      - trident-internal
+    kind: TridentNode
+    listKind: TridentNodeList
+    plural: tridentnodes
+    shortNames:
+      - tnode
+    singular: tridentnode
+  scope: Namespaced
+  versions:
+    - name: v1
+      schema:
+        openAPIV3Schema:
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
+      served: true
+      storage: true
+status:
+  acceptedNames:
+    categories:
+      - trident
+      - trident-internal
+    kind: TridentNode
+    listKind: TridentNodeList
+    plural: tridentnodes
+    shortNames:
+      - tnode
+    singular: tridentnode
+  conditions:
+    - lastTransitionTime: "2025-02-06T03:31:22Z"
+      message: no conflicts found
+      reason: NoConflicts
+      status: "True"
+      type: NamesAccepted
+    - lastTransitionTime: "2025-02-06T03:31:22Z"
+      message: the initial names have been accepted
+      reason: InitialNamesAccepted
+      status: "True"
+      type: Established
+  storedVersions:
+    - v1
