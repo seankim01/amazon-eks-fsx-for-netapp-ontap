@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action":
+          [
+            "fsx:DescribeFileSystems",
+            "fsx:DescribeVolumes",
+            "fsx:CreateVolume",
+            "fsx:RestoreVolumeFromSnapshot",
+            "fsx:DescribeStorageVirtualMachines",
+            "fsx:UntagResource",
+            "fsx:UpdateVolume",
+            "fsx:TagResource",
+            "fsx:DeleteVolume"
+          ],
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": "secretsmanager:GetSecretValue",
+        "Resource": "arn:aws:secretsmanager:ap-northeast-2:446805103418:secret:fsxn_password_secret-vJqXMy"
+      }
+    ]
+}
