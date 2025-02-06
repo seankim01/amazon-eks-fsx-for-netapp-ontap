@@ -19,7 +19,7 @@ resource "aws_fsx_ontap_file_system" "eksfs" {
   throughput_capacity = 128
   preferred_subnet_id = module.vpc.private_subnets[0]
   security_group_ids  = [aws_security_group.fsx_sg.id]
-  # fsx_admin_password  = var.fsx_admin_password
+  #fsx_admin_password  = var.fsx_admin_password
   fsx_admin_password = random_string.fsx_password.result
   route_table_ids    = module.vpc.private_route_table_ids
   tags = {

@@ -17,7 +17,8 @@ data "aws_availability_zones" "available" {
 }
 
 locals {
-  cluster_name = "fsx-eks-${random_string.suffix.result}"
+  #cluster_name = "fsx-eks-${random_string.suffix.result}"
+  cluster_name = "satreci-poc-${random_string.suffix.result}"
   tags = {
     project = "amazon-eks-fsx-for-netapp-ontap"
     owner   = "aws"
@@ -33,7 +34,8 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.5.2"
 
-  name                 = "fsxn-eks-vpc"
+  #name                 = "fsxn-eks-vpc"
+  name                 = "satreci-poc-vpc"  
   cidr                 = var.vpc_cidr
   #azs                  = data.aws_availability_zones.available.names
   #azs                  = slice(data.aws_availability_zones.available.names, 0, 3)

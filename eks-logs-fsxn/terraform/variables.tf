@@ -1,6 +1,6 @@
 variable "kubernetes_version" {
-  default     = 1.29
-  #default     = 1.32
+  #default     = 1.29
+  default     = 1.30
   description = "kubernetes version"
 }
 
@@ -16,7 +16,8 @@ variable "aws_region" {
 }
 
 variable "fsxame" {
-  default     = "eksfs"
+  #default     = "eksfs"
+  default     = "eks-netapp-fs"  
   description = "default fsx name"
 }
 
@@ -26,7 +27,8 @@ variable "fsx_admin_password" {
 }
 
 variable "fsxn_addon_version" {
-  default     = "v24.2.0-eksbuild.1"
+  #default     = "v24.2.0-eksbuild.1"
+  default     = "v24.10.0-eksbuild.1"  
   description = "fsx csi addon version"
 }
 

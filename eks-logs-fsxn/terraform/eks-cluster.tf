@@ -21,7 +21,8 @@ module "eks" {
 
   eks_managed_node_groups = {
 
-    fsx_group = {
+    #fsx_group = {
+    satreci-poc-node = {      
       min_size     = 2
       max_size     = 6
       desired_size = 2
