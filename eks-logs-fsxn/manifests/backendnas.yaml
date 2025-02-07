@@ -9,8 +9,9 @@ spec:
   backendName: tbc-ontap-nas
   svm: ekssvm
   aws:
-    fsxFilesystemID: fs-065a82fb60b5bc70d
+    fsxFilesystemID: fs-0425716071ec34eab
   credentials:
+    #name: "trident-secret"
     #name: arn:aws:secretsmanager:ap-northeast-2:446805103418:secret:fsxn_password_secret-vJqXMy
-    name: "arn:aws:secretsmanager:ap-northeast-2:446805103418:secret:trident-secret-7FJ5DT"
     type: awsarn
+    name: "arn:aws:secretsmanager:ap-northeast-2:446805103418:secret:satreci_fsx_pass_secret-augrKX"

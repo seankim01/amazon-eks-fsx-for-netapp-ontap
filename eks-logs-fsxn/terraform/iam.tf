@@ -59,7 +59,7 @@ locals {
 
 resource "aws_secretsmanager_secret" "fsxn_password_secret" {
   #name = "fsxn_password_secret"
-  name = "satreci_fsx_pw_secret"  
+  name = "satreci_fsx_pass_secret"  
   description = "FSxN CSI Driver Password"
 }
 

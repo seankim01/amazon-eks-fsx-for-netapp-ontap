@@ -1,6 +1,6 @@
 variable "kubernetes_version" {
   #default     = 1.29
-  default     = 1.30
+  default     = "1.30"
   description = "kubernetes version"
 }
 
